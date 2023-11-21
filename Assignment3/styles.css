@@ -1,0 +1,99 @@
+/* Add these styles for animations */
+@keyframes fadeInGreen {
+  from {
+    background-color: #e0e0e0;
+  }
+  to {
+    background-color: #c8e6c9;
+  }
+}
+
+@keyframes fadeOutRed {
+  from {
+    background-color: #e0e0e0;
+  }
+  to {
+    background-color: #ffcdd2;
+  }
+}
+
+@keyframes checkedAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: cornsilk;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#newTodo {
+  padding: 8px;
+  margin-right: 5px;
+}
+
+button {
+  padding: 8px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+}
+
+li.checked {
+  animation: fadeInGreen 0.5s ease-out;
+}
+
+li.deleted {
+  animation: fadeOutRed 0.5s ease-out;
+}
+
+li.checked-animation {
+  animation: checkedAnimation 1s ease-in-out;
+}
+
+li.checked span {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+li button {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
